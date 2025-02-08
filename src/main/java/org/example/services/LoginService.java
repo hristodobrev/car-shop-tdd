@@ -6,11 +6,13 @@ import org.example.repositories.UserRepository;
 import java.util.List;
 
 public class LoginService {
+    private final UserRepository userRepository = new UserRepository();
+
     public String login(String username, String password) {
-        List<User> users = UserRepository.getAll();
+        List<User> users = this.userRepository.getAll();
         String message = "Incorrect username or password!";
 
-        if(users.stream().anyMatch(u -> u.getName().equals(username) && u.getPassword().equals(password))) {
+        if (users.stream().anyMatch(u -> u.getUsername().equals(username) && u.getPassword().equals(password))) {
             message = "Successfully logged in!";
         }
 
