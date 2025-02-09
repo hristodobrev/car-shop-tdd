@@ -12,6 +12,10 @@ public class UserRepository {
         users.add(new User("John", "123456"));
     }
 
+    public User get(int id) {
+        return users.get(id);
+    }
+
     public List<User> getAll() {
         return users;
     }

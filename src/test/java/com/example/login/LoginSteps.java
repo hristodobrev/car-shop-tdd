@@ -39,9 +39,4 @@ public class LoginSteps {
     public void userIsPresentedWithMessage(String message) {
         Assert.assertEquals(message, this.userDetails.getMessage());
     }
-
-    @Given("User enters the register screen")
-    public void userEntersTheRegisterScreen() {
-
-    }
 }

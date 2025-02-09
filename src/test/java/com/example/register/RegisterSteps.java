@@ -2,6 +2,7 @@ package com.example.register;
 
 import com.example.UserDetails;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import org.example.services.RegisterService;
 
 public class RegisterSteps {
@@ -10,6 +11,11 @@ public class RegisterSteps {
 
     public RegisterSteps(UserDetails userDetails) {
         this.userDetails = userDetails;
+    }
+
+    @Given("User enters the register screen")
+    public void userEntersTheRegisterScreen() {
+
     }
 
     @And("User enters confirmPassword {string}")
