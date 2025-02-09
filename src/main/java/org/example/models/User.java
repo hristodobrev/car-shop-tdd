@@ -1,10 +1,13 @@
 package org.example.models;
 
+import java.util.List;
+
 public class User {
     private String name;
     private String username;
     private String password;
     private String email;
+    private List<Ad> ads;
 
     public User(String username, String password) {
         this.setUsername(username);
@@ -16,6 +19,14 @@ public class User {
         this.setPassword(password);
         this.setEmail(email);
         this.setName(name);
+    }
+
+    public List<Ad> getAds() {
+        return ads;
+    }
+
+    public void setAds(List<Ad> ads) {
+        this.ads = ads;
     }
 
     public String getName() {
